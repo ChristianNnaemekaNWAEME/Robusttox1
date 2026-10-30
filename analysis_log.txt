@@ -1,0 +1,101 @@
+rows 2754 tasks 17 seeds 3 methods 9
+noise              margin-0.1  margin-0.2  none-0.0  random-0.1  random-0.2  random-0.3
+method                                                                                 
+AdaTrim                 0.530       0.429     0.754       0.724       0.683       0.627
+Alerts-only             0.531       0.504     0.594       0.580       0.559       0.537
+Gradient boosting       0.713       0.646     0.781       0.721       0.682       0.623
+L1-Logit                0.526       0.432     0.751       0.724       0.685       0.629
+Random Forest           0.720       0.646     0.797       0.763       0.719       0.663
+RobustTox               0.523       0.426     0.738       0.705       0.668       0.616
+SLTS-linear (J-5)       0.499       0.390     0.726       0.712       0.686       0.638
+StabSel                 0.507       0.422     0.727       0.700       0.650       0.603
+TrimLogit               0.526       0.418     0.745       0.723       0.680       0.623
+noise              margin-0.1  margin-0.2  random-0.1  random-0.2  random-0.3
+method                                                                       
+AdaTrim                 0.224       0.325       0.030       0.071       0.127
+Alerts-only             0.063       0.090       0.013       0.035       0.057
+Gradient boosting       0.068       0.135       0.059       0.099       0.158
+L1-Logit                0.225       0.319       0.027       0.067       0.122
+Random Forest           0.076       0.151       0.034       0.077       0.133
+RobustTox               0.215       0.312       0.033       0.070       0.122
+SLTS-linear (J-5)       0.226       0.336       0.013       0.040       0.088
+StabSel                 0.220       0.305       0.027       0.077       0.124
+TrimLogit               0.220       0.327       0.022       0.066       0.122
+         noise                ref         method  mean_diff      lo      hi  wins   n  p_wilcoxon
+0   margin-0.1  SLTS-linear (J-5)        AdaTrim     0.0302  0.0070  0.0545    12  17      0.0267
+4   margin-0.1  SLTS-linear (J-5)  Random Forest     0.2208  0.1631  0.2836    17  17      0.0000
+5   margin-0.1  SLTS-linear (J-5)      RobustTox     0.0240 -0.0048  0.0512    11  17      0.0714
+6   margin-0.1  SLTS-linear (J-5)        StabSel     0.0074 -0.0146  0.0312     7  17      0.8536
+7   margin-0.1  SLTS-linear (J-5)      TrimLogit     0.0264  0.0057  0.0488    11  17      0.0348
+16  margin-0.2  SLTS-linear (J-5)        AdaTrim     0.0392  0.0152  0.0665    12  17      0.0110
+20  margin-0.2  SLTS-linear (J-5)  Random Forest     0.2561  0.2063  0.3062    17  17      0.0000
+21  margin-0.2  SLTS-linear (J-5)      RobustTox     0.0361  0.0094  0.0625    12  17      0.0232
+22  margin-0.2  SLTS-linear (J-5)        StabSel     0.0326  0.0042  0.0638    13  17      0.0348
+23  margin-0.2  SLTS-linear (J-5)      TrimLogit     0.0283  0.0082  0.0516    13  17      0.0174
+32    none-0.0  SLTS-linear (J-5)        AdaTrim     0.0281  0.0178  0.0385    15  17      0.0002
+36    none-0.0  SLTS-linear (J-5)  Random Forest     0.0710  0.0579  0.0852    17  17      0.0000
+37    none-0.0  SLTS-linear (J-5)      RobustTox     0.0125  0.0015  0.0237    10  17      0.1202
+38    none-0.0  SLTS-linear (J-5)        StabSel     0.0015 -0.0166  0.0173     8  17      0.7467
+39    none-0.0  SLTS-linear (J-5)      TrimLogit     0.0198  0.0121  0.0283    15  17      0.0002
+48  random-0.1  SLTS-linear (J-5)        AdaTrim     0.0120  0.0039  0.0200    13  17      0.0093
+52  random-0.1  SLTS-linear (J-5)  Random Forest     0.0505  0.0384  0.0616    16  17      0.0000
+53  random-0.1  SLTS-linear (J-5)      RobustTox    -0.0071 -0.0207  0.0030     8  17      0.4874
+54  random-0.1  SLTS-linear (J-5)        StabSel    -0.0120 -0.0246 -0.0005     6  17      0.1202
+55  random-0.1  SLTS-linear (J-5)      TrimLogit     0.0112  0.0040  0.0175    14  17      0.0067
+64  random-0.2  SLTS-linear (J-5)        AdaTrim    -0.0030 -0.0177  0.0073    10  17      0.7819
+68  random-0.2  SLTS-linear (J-5)  Random Forest     0.0338  0.0199  0.0455    16  17      0.0021
+69  random-0.2  SLTS-linear (J-5)      RobustTox    -0.0173 -0.0388 -0.0010     4  17      0.0797
+70  random-0.2  SLTS-linear (J-5)        StabSel    -0.0356 -0.0611 -0.0157     3  17      0.0026
+71  random-0.2  SLTS-linear (J-5)      TrimLogit    -0.0060 -0.0202  0.0048     8  17      0.5791
+80  random-0.3  SLTS-linear (J-5)        AdaTrim    -0.0109 -0.0290  0.0047     8  17      0.3060
+84  random-0.3  SLTS-linear (J-5)  Random Forest     0.0254  0.0108  0.0401    12  17      0.0056
+85  random-0.3  SLTS-linear (J-5)      RobustTox    -0.0223 -0.0428 -0.0040     7  17      0.0984
+86  random-0.3  SLTS-linear (J-5)        StabSel    -0.0350 -0.0549 -0.0168     3  17      0.0021
+87  random-0.3  SLTS-linear (J-5)      TrimLogit    -0.0148 -0.0318  0.0013     8  17      0.2247
+noise              margin-0.1  margin-0.2  none-0.0  random-0.1  random-0.2  random-0.3
+method                                                                                 
+AdaTrim                  57.0        69.0      29.0        46.0        58.0        78.0
+Alerts-only              81.0        94.0      47.0        67.0        38.0        29.0
+L1-Logit                 92.0       121.0      38.0        65.0        75.0        91.0
+RobustTox                20.0        25.0       8.0        13.0        20.0        10.0
+SLTS-linear (J-5)        41.0        57.0      20.0        40.0        56.0        30.0
+StabSel                  20.0        26.0       8.0         6.0         5.0         5.0
+TrimLogit                46.0        54.0      22.0        47.0        65.0        83.0
+                              trim_frac  flip_recall  precision
+noise      method                                              
+margin-0.1 AdaTrim                0.098        0.076      0.055
+           RobustTox              0.098        0.076      0.055
+           SLTS-linear (J-5)      0.100        0.055      0.055
+           TrimLogit              0.100        0.061      0.061
+margin-0.2 AdaTrim                0.079        0.029      0.052
+           RobustTox              0.079        0.029      0.052
+           SLTS-linear (J-5)      0.100        0.028      0.056
+           TrimLogit              0.100        0.030      0.061
+random-0.1 AdaTrim                0.100        0.173      0.183
+           RobustTox              0.100        0.173      0.183
+           SLTS-linear (J-5)      0.100        0.179      0.180
+           TrimLogit              0.100        0.185      0.185
+random-0.2 AdaTrim                0.145        0.203      0.294
+           RobustTox              0.145        0.203      0.294
+           SLTS-linear (J-5)      0.100        0.147      0.300
+           TrimLogit              0.100        0.151      0.307
+random-0.3 AdaTrim                0.147        0.181      0.378
+           RobustTox              0.147        0.181      0.378
+           SLTS-linear (J-5)      0.100        0.127      0.386
+           TrimLogit              0.100        0.128      0.389
+h           0.80  0.90  0.95  1.00
+noise                             
+margin-0.1    14    14    16     7
+margin-0.2    10     9    23     9
+none-0.0       7    13     8    23
+random-0.1    17     9    16     9
+random-0.2    29    14     4     4
+random-0.3    33     4    10     4
+noise              none-0.0  random-0.2
+method                                 
+AdaTrim               0.381       0.117
+L1-Logit              0.447       0.127
+RobustTox             0.451       0.119
+SLTS-linear (J-5)     0.379       0.082
+StabSel               0.535       0.115
+TrimLogit             0.415       0.119
