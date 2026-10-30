@@ -9,7 +9,7 @@ This repository extends the earlier `toxicity-estimator-benchmark` (which showed
 ## Layout
 ```
 robusttox/        features.py (RDKit descriptors + Morgan counts)  split.py (randomised scaffold splits)
-                  methods.py (L1-Logit, SLTS-linear (J-5), TrimLogit, AdaTrim, StabilitySelection, RobustTox)
+                  methods.py (L1-Logit, SLTS-linear, TrimLogit, AdaTrim, StabilitySelection, RobustTox)
                   alerts.py (Brenk / PAINS / NIH via RDKit FilterCatalog)
 scripts/          prepare_data.py  run_benchmark.py  run_alerts_baseline.py  run_simulation.py  analyze.py  interpret.py
 tests/            pytest suite (stratified trimming, monotone C-steps, split disjointness, support recovery)
@@ -34,11 +34,14 @@ pytest tests
 ```
 The `results/` folder already contains the raw result files and tables from the run reported in `docs/report/RobustTox_Technical_Report.pdf`, so you can inspect the numbers without rerunning anything.
 
+## Work in progress
+The next phase extends this benchmark to FDA's DILIrank list of liver-injury drugs and further Tox21 and ToxCast data, with a comparison against a published graph neural network. Status and scope are in [`ROADMAP.md`](ROADMAP.md). No results from that work are reported here yet.
+
 ## Authors and licence
-Christian N. Nwaeme and Adewale F. Lukman. MIT licence. The software, analysis and first draft of the report were produced with the assistance of an AI system (Claude, Anthropic); the authors are responsible for verifying them.
+Christian N. Nwaeme and Adewale F. Lukman. MIT licence.
 
 ## Data (all public, via MoleculeNet)
-Tox21 (12 tasks), ClinTox (CT_TOX), SIDER (Hepatobiliary disorders), and three ToxCast hepatocyte high-content-screening endpoints (HepG2 cell loss 72 h, mitochondrial membrane potential 24 h, oxidative stress 24 h). **The ToxCast endpoints are in-vitro hepatocyte readouts, not clinical drug-induced liver injury**; a DILI set (e.g. DILIrank) should be added when it can be downloaded.
+Tox21 (12 tasks), ClinTox (CT_TOX), SIDER (Hepatobiliary disorders), and three ToxCast hepatocyte high-content-screening endpoints (HepG2 cell loss 72 h, mitochondrial membrane potential 24 h, oxidative stress 24 h). **The ToxCast endpoints are in-vitro hepatocyte readouts, not clinical drug-induced liver injury**; a DILI set (e.g. DILIrank) is being added; see `ROADMAP.md`.
 
 ## Contamination models
 `random`: each training label flipped with probability eps. `margin`: the eps-fraction of training compounds that a reference model, fitted on the clean labels, classifies most confidently are flipped (a worst case for the direction of the fit). Test labels are never altered.
