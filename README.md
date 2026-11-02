@@ -37,8 +37,8 @@ The `results/` folder already contains the raw result files and tables from the 
 ## Work in progress
 The next phase extends this benchmark to FDA's DILIrank list of liver-injury drugs and further Tox21 and ToxCast data, with a comparison against a published graph neural network. Status and scope are in [`ROADMAP.md`](ROADMAP.md). No results from that work are reported here yet.
 
-## Authors and licence
-Christian N. Nwaeme and Adewale F. Lukman. MIT licence.
+## Author and licence
+Christian N. Nwaeme. MIT licence.
 
 ## Data (all public, via MoleculeNet)
 Tox21 (12 tasks), ClinTox (CT_TOX), SIDER (Hepatobiliary disorders), and three ToxCast hepatocyte high-content-screening endpoints (HepG2 cell loss 72 h, mitochondrial membrane potential 24 h, oxidative stress 24 h). **The ToxCast endpoints are in-vitro hepatocyte readouts, not clinical drug-induced liver injury**; a DILI set (e.g. DILIrank) is being added; see `ROADMAP.md`.
