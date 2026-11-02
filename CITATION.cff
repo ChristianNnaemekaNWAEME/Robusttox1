@@ -4,8 +4,6 @@ title: "RobustTox: A Contamination-Robust, Interpretable Toxicity-Prediction Lib
 authors:
   - family-names: Nwaeme
     given-names: Christian N.
-  - family-names: Lukman
-    given-names: Adewale F.
 date-released: 2026-10-29
 license: MIT
 version: 0.1.0
